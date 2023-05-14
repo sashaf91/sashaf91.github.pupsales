@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<h1>Find your <strong class="emphasis">forever</strong> puppy</h1>
+<div class="row">
+    {%for i in prop%}
+    <div class="col">
+        <div class="card" style="width: 18rem; margin: 10px;">
+            <img src="{{i.imageURL}}" width="200" height="400" class="card-img-top" alt="No picture to display">
+            <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                <h3 class="card-title">R{{i.price}}</h3>
+                <p class="card-text">{{i.description}}</p>
+                <a>ADOPT ME!!</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}    
+</div>
+<form class="form-horizontal" action="/action_page.php">
+    
+{% endblock %}
