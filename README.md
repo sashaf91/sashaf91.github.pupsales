@@ -1,1 +1,1 @@
-# sashaf91.github.pupsales
+Project name: Pupsales
